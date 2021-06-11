@@ -1,4 +1,4 @@
-const brokenImages = [
+export const brokenImages = [
     1, 24, 32, 36, 44, 47
 ];
 
