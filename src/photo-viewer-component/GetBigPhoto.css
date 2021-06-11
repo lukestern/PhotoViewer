@@ -1,0 +1,9 @@
+.large-photo-container {
+    display: flex;
+    width: 100%;
+}
+
+.large-photo {
+    width: 90vw;
+    margin: 5vw;
+}

@@ -1,14 +1,18 @@
-import { PhotoViewer } from './photo-viewer-component/PhotoViewer';
-import logo from './logo.svg';
+import { ThumbNails } from './photo-viewer-component/ThumbNails';
+import { GetBigPhoto } from './photo-viewer-component/GetBigPhoto';
 import './App.css';
+import { useState } from "react";
 
 
 function App() {
+  const [photoSelectedUrl, setPhotoSelected] = useState(null);
+
   return (
-      <div>
-          <h1>React Photo Viewer</h1>
-          <PhotoViewer src="https://picsum.photos/id/237/200/300"/>
-      </div>
+    <div>
+      <h1>React Photo Viewer</h1>
+      <GetBigPhoto photoSelectedUrl={photoSelectedUrl} />
+      <ThumbNails photoSelectedUrl={photoSelectedUrl} setPhotoSelected={setPhotoSelected} />
+    </div>
   );
 }
 
