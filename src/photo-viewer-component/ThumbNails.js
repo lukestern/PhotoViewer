@@ -8,14 +8,14 @@ export function ThumbNails(props) {
         (url) =>
             <img
                 key={url}
-                alt=''
+                alt={url}
                 className={url === props.photoSelectedUrl ? "small-photo-selected" : "small-photo"}
                 onClick={() => url === props.photoSelectedUrl ? props.setPhotoSelected(null) : props.setPhotoSelected(url)}
                 src={url} />
     );
 
     return (
-        <div className="small-photo-container">
+        <div className="small-photo-container" data-testid="small-photo-container">
             {imgList}
         </div>
     );
