@@ -6,6 +6,7 @@ export function ThumbNails(props) {
     const urlList = getImageUrls();
     const imgList = urlList.map(
         (url) =>
+        // img need to become Link
             <img
                 key={url}
                 alt={url}
