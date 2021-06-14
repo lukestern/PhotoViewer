@@ -2,13 +2,11 @@ import React from "react";
 import './ThumbNails.css';
 import { getImageUrls } from './getImageUrls'
 
-
-
-export function ThumbNails (props) {
+export function ThumbNails(props) {
     const urlList = getImageUrls();
     const imgList = urlList.map(
         (url) =>
-            <img 
+            <img
                 key={url}
                 alt=''
                 className={url === props.photoSelectedUrl ? "small-photo-selected" : "small-photo"}

@@ -3,7 +3,6 @@ import { GetBigPhoto } from './photo-viewer-component/GetBigPhoto';
 import './App.css';
 import { useState } from "react";
 
-
 function App() {
   const [photoSelectedUrl, setPhotoSelected] = useState(null);
 
