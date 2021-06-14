@@ -4,7 +4,7 @@ import './GetBigPhoto.css';
 export function GetBigPhoto(props) {
     return (
         <div className="large-photo-container">
-            <img alt='' className="large-photo" src={props.photoSelectedUrl} />
+            <img alt='' className="large-photo" src={props.photoSelectedUrl}  onClick={() => props.setPhotoSelected(null)} />
         </div>
     );
 }

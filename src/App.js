@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <h1>React Photo Viewer</h1>
-      <GetBigPhoto photoSelectedUrl={photoSelectedUrl} />
+      <GetBigPhoto photoSelectedUrl={photoSelectedUrl} setPhotoSelected={setPhotoSelected} />
       <ThumbNails photoSelectedUrl={photoSelectedUrl} setPhotoSelected={setPhotoSelected} />
     </div>
   );
