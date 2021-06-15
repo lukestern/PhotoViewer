@@ -3,14 +3,14 @@ export const brokenImages = [
 ];
 
 export function getImageUrls() {
-    const urls = [];
+    const photoIdList = [];
 
     for (let i = 0; i < 50; i++) {
         if (!brokenImages.includes(i)) {
             const imageNumberString = i.toString().padStart(2, '0');
-            urls.push(`https://picsum.photos/id/6${imageNumberString}/1600/900.jpg`)
+            photoIdList.push(imageNumberString);
         }
     }
 
-    return urls;
+    return photoIdList;
 }

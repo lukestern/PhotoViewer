@@ -1,18 +1,20 @@
 import React from "react";
 import './ThumbNails.css';
 import { getImageUrls } from './getImageUrls'
+import { Link } from 'react-router-dom'
 
 export function ThumbNails(props) {
-    const urlList = getImageUrls();
-    const imgList = urlList.map(
-        (url) =>
-        // img need to become Link
+    const photoIdList = getImageUrls();
+    const imgList = photoIdList.map(
+        (photoId) =>
+            <Link to={`/${photoId}`}>
             <img
-                key={url}
-                alt={url}
-                className={url === props.photoSelectedUrl ? "small-photo-selected" : "small-photo"}
-                onClick={() => url === props.photoSelectedUrl ? props.setPhotoSelected(null) : props.setPhotoSelected(url)}
-                src={url} />
+                key={photoId}
+                alt={photoId}
+                className={photoId === props.photoSelectedId ? "small-photo-selected" : "small-photo"}
+                onClick={() => photoId === props.photoSelectedId ? props.setPhotoSelected(null) : props.setPhotoSelected(photoId)}
+                src={`https://picsum.photos/id/6${photoId}/1600/900.jpg`} />
+            </Link>
     );
 
     return (
