@@ -31,7 +31,7 @@ function App() {
 function GetRouteById(props) {
   const { photoSelectedId, setPhotoSelected } = props;
   const { photoId } = useParams();
-  useEffect(() => {setPhotoSelected(photoId)});
+  useEffect(() => {setPhotoSelected(photoId)}, []);
   return (
     <div>
       <GetBigPhoto photoSelectedId={photoSelectedId} setPhotoSelected={setPhotoSelected} />
